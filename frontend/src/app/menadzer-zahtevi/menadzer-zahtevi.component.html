@@ -1,0 +1,53 @@
+<app-header-menadzer></app-header-menadzer>
+<h2>Zahtevi za registracijom:</h2>
+<h3 *ngIf="korisnici.length==0">Trenutno ne postoje zahtevi za registracijom</h3>
+<table class="blue-table" *ngIf="korisnici.length>0">
+  <thead>
+    <tr>
+        <th>Profilna fotografija</th>
+      <th>Korisnicko ime</th>
+      <th>Ime</th>
+      <th>Prezime</th>
+      <th>Imejl</th>
+      <th>Akcija</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let k of korisnici">
+        <td><img [src]="'http://localhost:4000/uploads/'+k.profilna_slika" alt="User Profile" class="user-profile"></td>
+        <td>{{k.ime}}</td>
+        <td>{{k.prezime}}</td>
+        <td>{{k.korisnicko_ime}}</td>
+        <td>{{k.imejl}}</td>
+        <td>
+            <button type="button" class="btn btn-outline-primary me-2" (click)="prihvati(k)">Prihvati</button>
+            <button class="btn btn-outline-primary me-2" (click)="odbij(k)">Odbij</button>
+        </td>
+    </tr>
+  </tbody>
+</table>
+<h2>Zahtevi za novom vrstom pregleda:</h2>
+<h3 *ngIf="vrPregleda.length==0">Trenutno ne postoje zahtevi za novom vrstom pregleda</h3>
+<table class="blue-table" *ngIf="vrPregleda.length>0">
+    <thead>
+      <tr>
+        <th>Naziv</th>
+        <th>Trajanje(minuti)</th>
+        <th>Cena pregleda(dinari)</th>
+        <th>Lekar:</th>
+        <th class="text-center">Akcija</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vrp of vrPregleda">
+          <td>{{vrp.naziv}}</td>
+          <td>{{vrp.trajanje}}</td>
+          <td>{{vrp.cena}}</td>
+          <td>{{vrp.lekari[0]}}</td>
+          <td colspan="2">
+              <button type="button" class="btn btn-outline-primary me-2" (click)="prihvatiVr(vrp)">Prihvati</button>
+              <button class="btn btn-outline-primary me-2" (click)="odbijVr(vrp)">Odbij</button>
+          </td>
+      </tr>
+    </tbody>
+  </table>

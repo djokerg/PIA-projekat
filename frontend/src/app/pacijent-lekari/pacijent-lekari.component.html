@@ -1,0 +1,89 @@
+<app-header-pacijent></app-header-pacijent>
+<div class="container">
+    <h2>Lekari:</h2>
+        <div class="col-md-4 mb-3">
+            <button class="btn btn-primary" (click)="searchData()">Pretrazi</button>
+        </div>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+            <input type="text" [(ngModel)]="ime"  class="form-control" placeholder="Ime">
+        </div>
+        <div class="col-md-4 mb-3">
+            <input type="text" [(ngModel)]="prezime"  class="form-control" placeholder="Prezime">
+        </div>
+        <div class="col-md-4 mb-3">
+            <input type="text" [(ngModel)]="specijalizacija"  class="form-control" placeholder="Specijalizacija">
+        </div>
+        <div class="col-md-4 mb-3">
+            <input type="text" [(ngModel)]="ogranak"  class="form-control" placeholder="Ogranak ordinacije">
+        </div>
+      </div>
+<p>{{rezultati}}</p>
+<div class="container"  *ngIf="searched.length>0">
+    <div class="row">
+      <div class="col-12">
+        <div  class="button-container">
+            <button class="btn btn-primary" (click)="sortBy('ime')">
+                Sortiraj po imenu
+                <span *ngIf="sortField === 'ime'" class="sort-icon">
+                {{ sortAscending ? '▲' : '▼' }}
+                </span>
+            </button>
+            <button class="btn btn-primary" (click)="sortBy('prezime')">
+                Sortiraj po prezimenu
+                <span *ngIf="sortField === 'prezime'" class="sort-icon">
+                {{ sortAscending ? '▲' : '▼' }}
+                </span>
+            </button>
+            <button class="btn btn-primary" (click)="sortBy('specijalizacija')">
+                Sortiraj po specijalizaciji
+                <span *ngIf="sortField === 'specijalizacija'" class="sort-icon">
+                    {{ sortAscending ? '▲' : '▼' }}
+                </span>
+            </button>
+            <button class="btn btn-primary" (click)="sortBy('ogranak_ordinacije')">
+                Sortiraj po ogranku
+                <span *ngIf="sortField === 'ogranak_ordinacije'" class="sort-icon">
+                    {{ sortAscending ? '▲' : '▼' }}
+                </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>Klikom na red tabele se odlazi na stranicu za tog lekara</p>
+<div class="table-container"  *ngIf="searched.length>0">
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead class="table-header">
+            <tr>
+                <th>Profilna fotografija</th>
+              <th>Ime</th>
+              <th>Prezime</th>
+              <th>Specijalizacija</th>
+              <th>Ogranak ordinacije</th>
+            </tr>
+          </thead>
+    <tbody>
+        <tr *ngFor="let l of searched" (click)="prikaziLekara(l)">
+        <td>
+            <img class="user-profile" [src]="'http://localhost:4000/uploads/'+l.profilna_slika" alt="Image">
+        </td>
+        <td>
+            <p>{{ l.ime }}</p>
+        </td>
+        <td>
+            <p>{{ l.prezime }}</p>
+        </td>
+        <td>
+            <p>{{ l.dodatno['specijalizacija'] }}</p>
+        </td>
+        <td>
+            <p>{{ l.dodatno['ogranak_ordinacije'] }}</p>
+        </td>
+        </tr>
+    </tbody>
+    </table>
+      </div>
+    </div>
+  </div>

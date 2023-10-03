@@ -1,0 +1,220 @@
+[{
+  "_id": {
+    "$oid": "64ee87dea9571f006253d936"
+  },
+  "korisnicko_ime": "menadzer",
+  "lozinka": "etf",
+  "tip": "menadzer",
+  "prihvacen": true,
+  "odbijen": false
+},
+{
+  "_id": {
+    "$oid": "64ee89597e384cbd1131df49"
+  },
+  "korisnicko_ime": "marija",
+  "lozinka": "Marija#01",
+  "ime": "Marija",
+  "prezime": "Marinkovic",
+  "adresa": "Javorska 100",
+  "br_telefona": "0643333560",
+  "imejl": "marija@gmail.com",
+  "tip": "lekar",
+  "dodatno": {
+    "broj_licence": 1249816340,
+    "specijalizacija": "ginekolog",
+    "ogranak_ordinacije": "B-17",
+    "slobodni_dani": []
+  },
+  "profilna_slika": "default-avatar.png",
+  "prihvacen": true,
+  "odbijen": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ee89a57e384cbd1131df4e"
+  },
+  "korisnicko_ime": "ana",
+  "lozinka": "AnaMako#01",
+  "ime": "Ana",
+  "prezime": "Mako",
+  "adresa": "Ivana Djaje",
+  "br_telefona": "06500304899",
+  "imejl": "ana@gmail.com",
+  "tip": "lekar",
+  "dodatno": {
+    "broj_licence": 293708234,
+    "specijalizacija": "otorinolaringolog",
+    "ogranak_ordinacije": "A-2",
+    "slobodni_dani": [
+      "2023-09-01",
+      "2023-09-02",
+      "2023-09-30",
+      "2023-09-03"
+    ]
+  },
+  "profilna_slika": "1693354741550.png",
+  "prihvacen": true,
+  "odbijen": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ee89d57e384cbd1131df53"
+  },
+  "korisnicko_ime": "sergej",
+  "lozinka": "Sergej#01",
+  "ime": "Sergej",
+  "prezime": "Vukasovic",
+  "adresa": "Pancevacka 100",
+  "br_telefona": "0632304273",
+  "imejl": "sergej@gmail.com",
+  "tip": "lekar",
+  "dodatno": {
+    "broj_licence": 923478234,
+    "specijalizacija": "kardiolog",
+    "ogranak_ordinacije": "A-3",
+    "slobodni_dani": []
+  },
+  "profilna_slika": "default-avatar.png",
+  "prihvacen": true,
+  "odbijen": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ee8a3a7e384cbd1131df58"
+  },
+  "korisnicko_ime": "aleksa",
+  "lozinka": "Aleksa#01",
+  "ime": "Aleksa",
+  "prezime": "Eric",
+  "adresa": "Ustanicka 77",
+  "br_telefona": "062983456",
+  "imejl": "aleksa@gmail.com",
+  "tip": "lekar",
+  "dodatno": {
+    "broj_licence": 555333,
+    "specijalizacija": "opsta praksa",
+    "ogranak_ordinacije": "A-4",
+    "slobodni_dani": []
+  },
+  "profilna_slika": "default-avatar.png",
+  "prihvacen": true,
+  "odbijen": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ee8b257e384cbd1131df74"
+  },
+  "korisnicko_ime": "sava",
+  "lozinka": "Sava#012",
+  "ime": "Sava",
+  "prezime": "Pavlovic",
+  "adresa": "Porodine 17",
+  "br_telefona": "061248714",
+  "imejl": "sava@gmail.com",
+  "tip": "pacijent",
+  "dodatno": null,
+  "profilna_slika": "default-avatar.png",
+  "prihvacen": false,
+  "odbijen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ee8b6f7e384cbd1131df77"
+  },
+  "korisnicko_ime": "pera",
+  "lozinka": "Petar#01",
+  "ime": "Petar",
+  "prezime": "Petrovic",
+  "adresa": "Beogradska 565",
+  "br_telefona": "064555333",
+  "imejl": "pera@gmail.com",
+  "tip": "pacijent",
+  "dodatno": null,
+  "profilna_slika": "1693383371074.png",
+  "prihvacen": true,
+  "odbijen": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ee8b917e384cbd1131df7b"
+  },
+  "korisnicko_ime": "biljana",
+  "lozinka": "Biljana#01",
+  "ime": "Biljana",
+  "prezime": "Puric",
+  "adresa": "Prijepoljska 33",
+  "br_telefona": "063823468",
+  "imejl": "bilja@gmail.com",
+  "tip": "pacijent",
+  "dodatno": null,
+  "profilna_slika": "default-avatar.png",
+  "prihvacen": true,
+  "odbijen": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eef8303cc35922822703a1"
+  },
+  "korisnicko_ime": "anas",
+  "lozinka": "Anas#012",
+  "ime": "Anastasija",
+  "prezime": "Mladic",
+  "adresa": "Banovo brdo 7",
+  "br_telefona": "062923846",
+  "imejl": "anas@gmail.com",
+  "tip": "pacijent",
+  "dodatno": null,
+  "profilna_slika": "default-avatar.png",
+  "prihvacen": true,
+  "odbijen": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eef8bc3cc35922822703a6"
+  },
+  "korisnicko_ime": "zika",
+  "lozinka": "Zika#012",
+  "ime": "Zika",
+  "prezime": "Zikic",
+  "adresa": "Mitrovacka 17",
+  "br_telefona": "06493246",
+  "imejl": "zika@gmail.com",
+  "tip": "pacijent",
+  "dodatno": null,
+  "profilna_slika": "1693382844878.png",
+  "prihvacen": false,
+  "odbijen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ef032e3cc35922822705b7"
+  },
+  "korisnicko_ime": "marko",
+  "lozinka": "Marko#01",
+  "ime": "Marko",
+  "prezime": "Stojanovic",
+  "adresa": "Paracinska 45",
+  "br_telefona": "0623490134",
+  "imejl": "marko@gmail.com",
+  "tip": "lekar",
+  "dodatno": {
+    "broj_licence": 325246,
+    "specijalizacija": "psihijatar",
+    "ogranak_ordinacije": "A-5",
+    "slobodni_dani": []
+  },
+  "profilna_slika": "default-avatar.png",
+  "prihvacen": true,
+  "odbijen": false,
+  "__v": 0
+}]

@@ -1,0 +1,51 @@
+<app-header-lekar></app-header-lekar>
+<h2>Naredna tri pregleda koja imate:</h2>
+<h3>Klikom na red u tabeli otvara se karton pacijenta koji je zakazao taj pregled</h3>
+<p *ngIf="pregledi_3.length==0">Nemate pregleda u buducnosti</p>
+<div class="table-responsive">
+<table class="blue-table" *ngIf="pregledi_3.length>0">
+    <thead>
+      <tr>
+        <th>Naziv</th>
+        <th>Datum</th>
+        <th>Trajanje</th>
+        <th>Pacijent</th>
+        <th>Otkazi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of pregledi_3">
+        <td (click)="izaberi_pacijenta(p)">{{p.vrsta?.naziv}}</td>
+        <td (click)="izaberi_pacijenta(p)">{{p.datum_formatted}}</td>
+        <td (click)="izaberi_pacijenta(p)">{{p.vrsta?.trajanje}}</td>
+        <td (click)="izaberi_pacijenta(p)">{{p.p_ime_prezime}}</td>
+        <td><button type="button" class="btn btn-outline-primary me-2" (click)="otkazi(p)">Otkazi pregled</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <h2>Pregledi za koje je moguce napraviti izvestaj:</h2>
+  <p *ngIf="pregledi.length==0">Ne postoje pregledi za koje je moguce napraviti izvestaj</p>
+  <div class="table-responsive">
+<table class="blue-table" *ngIf="pregledi.length>0">
+  <thead>
+    <tr>
+      <th>Naziv</th>
+      <th>Datum</th>
+      <th>Trajanje</th>
+      <th>Pacijent</th>
+      <th>Izvestaj</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of pregledi">
+      <td>{{p.vrsta?.naziv}}</td>
+      <td>{{p.datum_formatted}}</td>
+      <td>{{p.vrsta?.trajanje}}</td>
+      <td>{{p.p_ime_prezime}}</td>
+      <td><button type="button" class="btn btn-outline-primary me-2" (click)="unesi_izvestaj(p)">Unesi izvestaj</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<app-kalendar></app-kalendar>

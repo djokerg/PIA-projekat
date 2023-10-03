@@ -1,0 +1,80 @@
+<header class="header justify-content-between">
+    <div class="header-title">
+      <a routerLink="/">MediCare</a>
+    </div>
+    <div class="header-buttons">
+      <button type="button" class="btn btn-primary" (click)="prijava()">Prijavi se</button>
+    </div>
+  </header>
+<div class="container" style="margin-top: 10px;">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="register-container">
+          <form class="register-form">
+            <h2>Registracija</h2>
+            <div class="form-group">
+              <label for="kor_ime">Korisnicko ime</label> 
+              <input type="text" id="kor_ime" name="kor_ime" class="form-control" [(ngModel)]="korisnicko_ime" (input)="proveri_kor_ime()">
+              <ul *ngIf= korisnicko_ime>
+                  <li *ngIf="error_kor_ime">Vec postoji nalog sa tim korisnickim imenom</li>
+                  <li *ngIf="error_kor_ime_o" style="color: red;">Nalog sa tim korisnickim imenom je odbijen</li>
+              </ul>
+            </div>
+            <div class="form-group">
+                <label for="lozinka">Lozinka</label>
+                <input id="lozinka" name="lozinka" class="form-control" (input)="proveri_lozinku()" type="password" [(ngModel)]="lozinka">
+                <ul *ngIf="lozinka">
+                    <li *ngIf="error_8">Lozinka mora imati vise od 8 karaktera</li>
+                    <li *ngIf="error_14">Lozinka mora imati manje od 14 karaktera</li>
+                    <li *ngIf="error_vs">Lozinka mora imati jedno veliko slovo</li>
+                    <li *ngIf="error_pocetno_slovo">Lozinka mora poceti slovom</li>
+                    <li *ngIf="error_broj">Lozinka mora sadrzati broj</li>
+                    <li *ngIf="error_susedni">Lozinka ne sme imati dva susedna znaka ista</li>
+                    <li *ngIf="error_spec">Lozinka mora imati specijalni karakter</li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <label for="potvrda">Potvrda lozinke</label>
+                <input type="password" id="potvrda" name="potvrda" class="form-control" [(ngModel)]="potvrda_lozinke" (input)="proveri_potvrdu_lozinke()">
+                <ul *ngIf="potvrda_lozinke">
+                    <li *ngIf="error_potvrda">Uneli ste razlicitu lozinku</li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <label for="ime">Ime</label>
+                <input type="text" id="ime" name="ime" class="form-control" [(ngModel)]="ime">
+            </div>
+            <div class="form-group">
+                <label for="prezime">Prezime</label>
+                <input type="text" id="prezime" name="prezime" class="form-control" [(ngModel)]="prezime">
+            </div>
+            <div class="form-group">
+                <label for="adresa">Adresa</label>
+                <input type="text" id="adresa" name="adresa" class="form-control" [(ngModel)]="adresa">
+            </div>
+            <div class="form-group">
+                <label for="br_telefona">Kontakt telefon</label>
+                <input type="text" id="br_telefona" name="br_telefona" class="form-control" [(ngModel)]="br_telefona">
+            </div>
+            <div class="form-group">
+                <label for="imejl">I-mejl adresa</label>
+                <input type="text" id="imejl" name="imejl" class="form-control" [(ngModel)]="imejl" (input)="proveri_mejl()">
+                <ul *ngIf="imejl">
+                    <li *ngIf="format_mejla_error()">Mejl adresa nije u odgovarajucem formatu</li>
+                    <li *ngIf="error_mejl">Vec postoji nalog sa tom mejl adresom</li>
+                    <li *ngIf="error_mejl_o" style="color: red;">Nalog sa tom imejl adresom je odbijen</li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <label for="profilna">Profilna fotografija(nije obavezno)</label>
+                <img *ngIf="selectedFile" class="current-profile-picture" [src]="preview" alt="New Profile Picture">
+                <input type="file" id="profilna" name="profilna" accept="image/png, image/jpg" (change)="handleFile($event)" class="form-control">
+                <p>{{picture_error}}</p>
+            </div>
+            {{msg}}
+            <button class="btn btn-primary" (click)="registracija()">Potvrdi</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

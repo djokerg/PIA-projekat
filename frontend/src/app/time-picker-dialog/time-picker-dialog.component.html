@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Izaberite vreme pregleda</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Vreme</mat-label>
+    <input matInput [(ngModel)]="selectedTime" type="time">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button class="btn btn-outline-primary" mat-button (click)="closeDialog()">Potvrdi</button>
+  <button class="btn btn-outline-primary" mat-button (click)="dialogRef.close()">Otkazi</button>
+</mat-dialog-actions>

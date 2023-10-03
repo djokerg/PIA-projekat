@@ -1,0 +1,25 @@
+<app-header-pacijent></app-header-pacijent>
+<h2>Zakazivanje pregleda:</h2>
+<table class="image-table">
+  <tbody>
+      <tr>
+          <td class="text-cell">
+              <p>{{vrpr?.naziv}}</p>
+          </td>
+          <td class="text-cell">
+          <p>{{vrpr?.trajanje}}</p>
+          </td>
+          <td class="text-cell">
+          <p>{{vrpr?.cena}}</p>
+          </td>
+      </tr>
+  </tbody>
+</table>
+  Unesite datum i vreme pregleda:
+  <input type="datetime-local" [(ngModel)]="datum_vreme"><br>
+  <button type="button" class="btn btn-outline-primary me-2" (click)="potvrdi()">Potvrdi</button>
+  <button type="button" class="btn btn-outline-primary me-2" (click)="nazad()">Nazad</button>
+  <h2 style="color: red;">{{error}}</h2>
+  <full-calendar #fullCalendar [options]="calendarOptions"></full-calendar>
+  <h2 style="color: red;">{{error}}</h2>
+  

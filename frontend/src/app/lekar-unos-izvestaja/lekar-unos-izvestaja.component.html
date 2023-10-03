@@ -1,0 +1,29 @@
+<app-header-lekar></app-header-lekar>
+<div class="izvestaj-form">
+  <h2>Unesite novi izvestaj:</h2>
+  <form>
+    <div class="form-group">
+      <label for="datum_vreme">Datum i vreme:</label>
+      <input type="datetime-local" [value]="datum_vreme" id="datum_vreme" name="datum_vreme" [(ngModel)]="datum_vreme" required>
+    </div>
+    <div class="form-group">
+      <label for="razlog_dolaska">Razlog dolaska</label>
+      <input type="text" id="razlog_dolaska" name="razlog_dolaska" [(ngModel)]="razlog_dolaska" required>
+    </div>
+    <div class="form-group">
+      <label for="dijagnoza">Dijagnoza</label>
+      <textarea id="dijagnoza"  name="dijagnoza" [(ngModel)]="dijagnoza" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="prep_terapija">Preporucena terapija</label>
+      <textarea id="prep_terapija"  name="prep_terapija" [(ngModel)]="prep_terapija" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="prep_datum">Preporuceni datum i vreme sledeceg dolaska:</label>
+      <input type="datetime-local" id="prep_datum" name="prep_datum" [(ngModel)]="prep_datum" required>
+    </div>
+    <button class="btn btn-outline-primary me-2 text-center" (click)="sacuvaj()" type="submit">Sacuvaj</button>
+    <button class="btn btn-outline-primary me-2 text-center" (click)="nazad()">Otkazi</button>
+    <p>{{error}}</p>
+  </form>
+</div>

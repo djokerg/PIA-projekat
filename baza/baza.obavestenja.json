@@ -1,0 +1,88 @@
+[{
+  "_id": {
+    "$oid": "64ee9d417e384cbd1131e483"
+  },
+  "id": 1,
+  "naslov": "Promocija-peti pregled",
+  "tekst": "Svaki peti pregled za sve korisnike je besplatan do daljnjeg.",
+  "pacijent": "pera",
+  "procitano": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ee9d417e384cbd1131e486"
+  },
+  "id": 2,
+  "naslov": "Promocija-peti pregled",
+  "tekst": "Svaki peti pregled za sve korisnike je besplatan do daljnjeg.",
+  "pacijent": "biljana",
+  "procitano": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ee9d417e384cbd1131e489"
+  },
+  "id": 3,
+  "naslov": "Promocija-peti pregled",
+  "tekst": "Svaki peti pregled za sve korisnike je besplatan do daljnjeg.",
+  "pacijent": "djordje",
+  "procitano": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ee9de97e384cbd1131e4ef"
+  },
+  "id": 4,
+  "naslov": "Promena cene pregleda - Pregled grla",
+  "tekst": "Trenutna cena Pregled grla iznosi 3000 dinara.",
+  "pacijent": "pera",
+  "procitano": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ef01c83cc3592282270533"
+  },
+  "id": 5,
+  "naslov": "Otkazan pregled",
+  "tekst": "Vas pregled zakazan datuma 9/4/2023 10:35:00 AM kod lekara Ana Mako je otkazan iz sledecih razloga:\nKonzilijum",
+  "pacijent": "pera",
+  "procitano": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ef03733cc35922822705e7"
+  },
+  "id": 6,
+  "naslov": "Promocija-seansa",
+  "tekst": "Svi pacijenti imaju pravo na jednu besplatnu seansu kod naseg psihijatra Marka Stojanovica.",
+  "pacijent": "pera",
+  "procitano": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ef03733cc35922822705ea"
+  },
+  "id": 7,
+  "naslov": "Promocija-seansa",
+  "tekst": "Svi pacijenti imaju pravo na jednu besplatnu seansu kod naseg psihijatra Marka Stojanovica.",
+  "pacijent": "biljana",
+  "procitano": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ef03733cc35922822705ed"
+  },
+  "id": 8,
+  "naslov": "Promocija-seansa",
+  "tekst": "Svi pacijenti imaju pravo na jednu besplatnu seansu kod naseg psihijatra Marka Stojanovica.",
+  "pacijent": "anas",
+  "procitano": false,
+  "__v": 0
+}]

@@ -1,0 +1,87 @@
+[{
+  "_id": {
+    "$oid": "64eb5b4ac6cbf5fcc8c4b2f6"
+  },
+  "id": 1,
+  "naziv": "opsta praksa",
+  "id_vr_pregleda": [
+    1,
+    2
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb5b58c6cbf5fcc8c4b2fa"
+  },
+  "id": 2,
+  "naziv": "kardiolog",
+  "id_vr_pregleda": [
+    3,
+    4,
+    13
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb5b86c6cbf5fcc8c4b2ff"
+  },
+  "id": 3,
+  "naziv": "internista",
+  "id_vr_pregleda": [
+    5,
+    6
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb5b8dc6cbf5fcc8c4b303"
+  },
+  "id": 4,
+  "naziv": "ginekolog",
+  "id_vr_pregleda": [
+    7,
+    10,
+    11,
+    12
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb5b9bc6cbf5fcc8c4b307"
+  },
+  "id": 5,
+  "naziv": "otorinolaringolog",
+  "id_vr_pregleda": [
+    8,
+    15,
+    16,
+    17
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb5bb0c6cbf5fcc8c4b30c"
+  },
+  "id": 6,
+  "naziv": "oftalmolog",
+  "id_vr_pregleda": [
+    9,
+    14
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ee9d587e384cbd1131e49b"
+  },
+  "naziv": "psihijatar",
+  "id_vr_pregleda": [
+    18
+  ],
+  "__v": 0
+}]

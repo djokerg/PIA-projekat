@@ -1,0 +1,73 @@
+<app-header-pacijent></app-header-pacijent>
+<h2>Buduci pregledi</h2>
+<p *ngIf="pregledi.length==0">Trenutno nemate zakazanih pregleda</p>
+<table class="image-table" *ngIf="pregledi.length>0">
+    <tbody>
+        <tr class="text-cell">
+            <th>Naziv</th>
+            <th>Datum</th>
+            <th>Ogranak</th>
+            <th>Lekar</th>
+            <th>Otkazi</th>
+        </tr>
+        <tr *ngFor="let p of pregledi">
+            <td class="text-cell">
+                <p>{{ p.vrsta.naziv }}</p>
+            </td>
+            <td class="text-cell">
+            <p>{{ p.datum_formatted }}</p>
+            </td>
+            <td class="text-cell">
+            <p>{{ p.ogranak }}</p>
+            </td>
+            <td class="text-cell">
+                <p>{{ p.l_ime_prezime }}</p>
+                </td>
+            <td class="text-cell">
+                <button type="button" class="btn btn-outline-primary me-2" (click)="otkazi_pregled(p)">Otkazi pregled</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<h2>Izvestaji</h2>
+<p *ngIf="izvestaji.length==0">Trenutno nemate aktuelnih izvestaja</p>
+<table class="image-table" *ngIf="izvestaji.length>0">
+    <tbody>
+        <tr class="text-cell">
+            <th>Datum</th>
+            <th>Lekar</th>
+            <th>Specijalizacija</th>
+            <th>Razlog dolaska</th>
+            <th>Dijagnoza</th>
+            <th>Preporucena terapija</th>
+            <th>Preporuceni datum narednog pregleda</th>
+            <th>Akcija</th>
+        </tr>
+        <tr *ngFor="let i of izvestaji">
+            <td class="text-cell">
+                <p>{{ i.datum_formatted }}</p>
+            </td>
+            <td class="text-cell">
+            <p>{{ i.l_ime_prezime }}</p>
+            </td>
+            <td class="text-cell">
+            <p>{{ i.specijalizacija }}</p>
+            </td>
+            <td class="text-cell">
+                <p>{{ i.razlog_dolaska }}</p>
+            </td>
+            <td class="text-cell">
+                <p>{{ i.dijagnoza }}</p>
+            </td>
+            <td class="text-cell">
+                <p>{{ i.prep_terapija }}</p>
+            </td>
+            <td class="text-cell">
+                <p>{{ i.prep_formatted }}</p>
+            </td>
+            <td class="text-cell">
+                <button type="button" class="btn btn-outline-primary me-2" (click)="generisiPDF(i)">Generisi PDF</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

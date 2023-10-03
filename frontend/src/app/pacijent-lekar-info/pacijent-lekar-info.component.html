@@ -1,0 +1,52 @@
+<app-header-pacijent></app-header-pacijent>
+<h1>Lekar:</h1>
+<table class="image-table">
+    <tbody>
+        <tr>
+            <td class="image-cell">
+                <div class="image-frame">
+                <img [src]="'http://localhost:4000/uploads/'+l.profilna_slika" alt="Image" class="image">
+                </div>
+            </td>
+            <td class="text-cell">
+                <p>{{ l.ime }}</p>
+            </td>
+            <td class="text-cell">
+            <p>{{ l.prezime }}</p>
+            </td>
+            <td class="text-cell">
+            <p>{{ l.dodatno['specijalizacija'] }}</p>
+            </td>
+            <td class="text-cell">
+            <p>{{ l.dodatno['ogranak_ordinacije'] }}</p>
+            </td>
+    </tr>
+</tbody>
+</table>
+<h2>Vrste pregleda koje obavlja lekar:</h2>
+<p *ngIf="vrste_pregleda.length==0">Lekar trenutno ne obavlja nijednu vrstu pregleda</p>
+<table class="image-table" *ngIf="vrste_pregleda.length>0">
+    <tbody>
+        <tr class="text-cell">
+            <th>Naziv</th>
+            <th>Trajanje</th>
+            <th>Cena pregleda(dinari)</th>
+            <th>Zakazivanje</th>
+        </tr>
+        <tr *ngFor="let p of vrste_pregleda">
+            <td class="text-cell">
+                <p>{{ p.naziv }}</p>
+            </td>
+            <td class="text-cell">
+            <p>{{ p.trajanje }}</p>
+            </td>
+            <td class="text-cell">
+            <p>{{ p.cena }}</p>
+            </td>
+            <td class="text-cell">
+                <button type="button" class="btn btn-outline-primary me-2" (click)="zakazi_pregled(p)">Zakazi pregled</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

@@ -1,0 +1,49 @@
+<app-header-menadzer></app-header-menadzer>
+<div class="edit-profile-form">
+    <h2>Azuriraj porfil</h2>
+    <form>
+      <div class="form-group">
+        <label for="profile-picture">Profilna fotografija</label>
+        <img *ngIf="!selectedFile" class="current-profile-picture" [src]="'http://localhost:4000/uploads/'+editedProfile?.profilna_slika" alt="Current Profile Picture">
+        <img *ngIf="selectedFile" class="current-profile-picture" [src]="preview" alt="New Profile Picture">
+        <input type="file" id="profile-picture" (change)="onPictureChange($event)">
+        {{pic_error}}
+      </div>
+      <div class="form-group">
+        <label for="name">Ime</label>
+        <input type="text" id="name" [(ngModel)]="editedProfile.ime" name="ime">
+      </div>
+      <div class="form-group">
+        <label for="surname">Prezime</label>
+        <input type="text" id="surname" [(ngModel)]="editedProfile.prezime" name="prezime">
+      </div>
+      <div class="form-group">
+        <label for="adresa">Adresa</label>
+        <input type="text" id="adresa" [(ngModel)]="editedProfile.adresa" name="adresa">
+      </div>
+      <div class="form-group">
+        <label for="imejl">E-mail</label>
+        <input type="text" id="adresa" [(ngModel)]="editedProfile.imejl" name="imejl">
+      </div>
+      <div class="form-group">
+        <label for="br_telefona">Kontakt telefon</label>
+        <input type="text" id="br_telefona" [(ngModel)]="editedProfile.br_telefona" name="br_telefona">
+      </div>
+      <div *ngIf="editedProfile.tip=='lekar'">
+        <div class="form-group">
+            <label for="broj_licence">Broj licence</label>
+            <input type="text" id="broj_licence" [(ngModel)]="editedProfile.dodatno['broj_licence']" name="broj_licence">
+        </div>
+        <div class="form-group">
+            <label for="specijalizacija">Specijalizacija</label>
+            <input type="text" id="specijalizacija" [(ngModel)]="editedProfile.dodatno['specijalizacija']" name="specijalizacija">
+        </div>
+        <div class="form-group">
+            <label for="ogranak">Ogranak ordinacije</label>
+            <input type="text" id="ogranak" [(ngModel)]="editedProfile.dodatno['ogranak_ordinacije']" name="ogranak">
+        </div>
+    </div>
+      <button class="btn btn-outline-primary me-2 text-center" (click)="saveChanges()">Sacuvaj</button>
+      <button class="btn btn-outline-primary me-2 text-center" (click)="otkazi()">Otkazi</button>
+    </form>
+  </div>

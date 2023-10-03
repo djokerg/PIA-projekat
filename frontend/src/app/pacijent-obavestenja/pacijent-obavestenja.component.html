@@ -1,0 +1,21 @@
+<app-header-pacijent></app-header-pacijent>
+<h1>Obavestenja</h1>
+<h2>Procitana obavestenja su obojena sivom bojom</h2>
+<p *ngIf="obavestenja.length==0">Trenutno nemate nijedno obavestenje</p>
+<table class="blue-table" *ngIf="obavestenja.length>0">
+  <thead>
+    <tr>
+      <th>Naslov</th>
+      <th>Akcija</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let o of obavestenja" [class.procitano]="o.procitano">
+        <td>{{o.naslov}}</td>
+        <td colspan="2">
+            <button type="button" class="btn btn-outline-primary me-2" (click)="detaljnije(o)">Procitaj</button>
+            <button class="btn btn-outline-primary me-2" (click)="obrisi(o)">Obrisi</button>
+        </td>
+    </tr>
+  </tbody>
+</table>

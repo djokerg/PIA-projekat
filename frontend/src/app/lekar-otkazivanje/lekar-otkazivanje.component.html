@@ -1,0 +1,13 @@
+<app-header-lekar></app-header-lekar>
+<div class="izvestaj-form">
+    <h2>Otkazivanje pregleda</h2>
+    <form>
+        <div class="form-group">
+            <label for="tekst">Razlog</label>
+            <textarea [(ngModel)]="tekst" id="tekst" name="tekst" placeholder="Unesite razlog otkazivanja pregleda"></textarea>
+        </div>
+        <button class="btn btn-outline-primary me-2 text-center" (click)="otkazi()">Otkazi pregled</button>
+        <button class="btn btn-outline-primary me-2 text-center" (click)="nazad()">Nazad</button>
+        <p>{{error}}</p>
+    </form>
+    </div>

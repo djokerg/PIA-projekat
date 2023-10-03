@@ -1,0 +1,32 @@
+<app-header-menadzer></app-header-menadzer>
+<h2>Korisnici sistema:</h2>
+<table class="blue-table" *ngIf="korisnici.length>0">
+  <thead>
+    <tr>
+      <th>Korisnicko ime</th>
+      <th>Imejl</th>
+      <th>Akcija</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let k of korisnici">
+        <td>{{k.korisnicko_ime}}</td>
+        <td>{{k.imejl}}</td>
+        <td>
+            <button type="button" class="btn btn-outline-primary me-2" (click)="detaljnije(k)">Detaljnije</button>
+            <button mat-raised-button class="btn btn-outline-primary me-2" (click)="obrisi(k)">Obrisi</button>
+        </td>
+    </tr>
+  </tbody>
+</table>
+<ng-template #confirmationDialog>
+    <h2 mat-dialog-title>Potvrda brisanja korisnika</h2>
+    <mat-dialog-content>
+      Da li ste sigurni da zelite da obrisete izabranog korisnika?
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button class="btn btn-outline-primary me-2" mat-button [mat-dialog-close]="true">Obrisi</button>
+      <button class="btn btn-outline-primary me-2" mat-button [mat-dialog-close]="false">Otkazi</button>
+    </mat-dialog-actions>
+  </ng-template>
+<button class="btn btn-outline-primary me-2" (click)="dodajlekara()">Dodaj novog lekara</button>

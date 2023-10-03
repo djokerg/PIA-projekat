@@ -1,0 +1,20 @@
+<app-header-menadzer></app-header-menadzer>
+<div class="izvestaj-form">
+    <h2>Dodajte novu vrstu pregleda za specijalizaciju {{s.naziv}}:</h2>
+    <form>
+        <div class="form-group">
+        <label for="naziv">Naziv:</label>
+        <input type="text" id="naziv" name="naziv" [(ngModel)]="naziv">
+        </div>
+        <div class="form-group">
+            <label for="cena">Cena(u dinarima):</label>
+            <input type="number" id="cena" name="cena" [(ngModel)]="cena">
+        </div>
+        <div class="form-group">
+            <label for="trajanje">Trajanje(u minutima):</label>
+            <input type="number" id="trajanje" name="trajanje" [(ngModel)]="trajanje">
+        </div>
+        <button class="btn btn-outline-primary me-2 text-center" (click)="dodaj()" type="submit">Dodaj</button>
+        <p>{{error}}</p>
+    </form>
+    </div>

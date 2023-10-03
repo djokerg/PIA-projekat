@@ -1,0 +1,78 @@
+[{
+  "_id": {
+    "$oid": "64ee96497e384cbd1131e1be"
+  },
+  "id": 9,
+  "lekar": "ana",
+  "datum_vreme": {
+    "$date": "2023-08-29T01:07:00.000Z"
+  },
+  "id_vrste": 8,
+  "pacijent": "pera",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eefcb23cc3592282270426"
+  },
+  "id": 13,
+  "lekar": "ana",
+  "datum_vreme": {
+    "$date": "2023-08-30T08:29:00.000Z"
+  },
+  "id_vrste": 15,
+  "pacijent": "pera",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eeff5b3cc3592282270499"
+  },
+  "id": 17,
+  "lekar": "ana",
+  "datum_vreme": {
+    "$date": "2023-08-31T08:36:00.000Z"
+  },
+  "id_vrste": 15,
+  "pacijent": "pera",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ef03f93cc3592282270627"
+  },
+  "id": 19,
+  "lekar": "marko",
+  "datum_vreme": {
+    "$date": "2023-08-30T12:00:00.000Z"
+  },
+  "id_vrste": 18,
+  "pacijent": "biljana",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ef08593cc359228227071e"
+  },
+  "id": 22,
+  "lekar": "ana",
+  "datum_vreme": {
+    "$date": "2023-08-30T14:13:00.000Z"
+  },
+  "id_vrste": 15,
+  "pacijent": "biljana",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ef09ca15491aa57c1aec32"
+  },
+  "id": 24,
+  "lekar": "ana",
+  "datum_vreme": {
+    "$date": "2023-08-30T03:22:00.000Z"
+  },
+  "id_vrste": 15,
+  "pacijent": "biljana",
+  "__v": 0
+}]

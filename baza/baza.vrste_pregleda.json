@@ -1,0 +1,236 @@
+[{
+  "_id": {
+    "$oid": "64eb5bbdc6cbf5fcc8c4b310"
+  },
+  "id": 1,
+  "naziv": "Pedijatrijski pregled",
+  "trajanje": 20,
+  "cena": 2000,
+  "lekari": [],
+  "prihvacena": true,
+  "odbijena": false,
+  "obrisana": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb5bd9c6cbf5fcc8c4b316"
+  },
+  "id": 2,
+  "naziv": "Hitan pregled",
+  "trajanje": 30,
+  "cena": 6000,
+  "lekari": [],
+  "prihvacena": true,
+  "odbijena": false,
+  "obrisana": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb5be4c6cbf5fcc8c4b31d"
+  },
+  "id": 3,
+  "naziv": "Pregled aorte",
+  "trajanje": 40,
+  "cena": 3000,
+  "lekari": [
+    "sergej"
+  ],
+  "prihvacena": true,
+  "odbijena": false,
+  "obrisana": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb5c7ac6cbf5fcc8c4b325"
+  },
+  "id": 4,
+  "naziv": "Pregled srca",
+  "trajanje": 45,
+  "cena": 4500,
+  "lekari": [
+    "sergej"
+  ],
+  "prihvacena": true,
+  "odbijena": false,
+  "obrisana": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb5c88c6cbf5fcc8c4b32e"
+  },
+  "id": 5,
+  "naziv": "Pregled zeluca",
+  "trajanje": 20,
+  "cena": 2000,
+  "lekari": [],
+  "prihvacena": true,
+  "odbijena": false,
+  "obrisana": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb5c96c6cbf5fcc8c4b338"
+  },
+  "id": 6,
+  "naziv": "Pregled slepog creva",
+  "trajanje": 15,
+  "cena": 2000,
+  "lekari": [],
+  "prihvacena": true,
+  "odbijena": false,
+  "obrisana": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb5ca8c6cbf5fcc8c4b343"
+  },
+  "id": 7,
+  "naziv": "Pregled jajnika",
+  "trajanje": 30,
+  "cena": 2500,
+  "lekari": [],
+  "prihvacena": true,
+  "odbijena": false,
+  "obrisana": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb5cc1c6cbf5fcc8c4b34f"
+  },
+  "id": 8,
+  "naziv": "Pregled grla",
+  "trajanje": 20,
+  "cena": 3000,
+  "lekari": [
+    "ana"
+  ],
+  "prihvacena": true,
+  "odbijena": false,
+  "obrisana": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb5cd5c6cbf5fcc8c4b35c"
+  },
+  "id": 9,
+  "naziv": "Pregled ociju",
+  "trajanje": 25,
+  "cena": 3500,
+  "lekari": [],
+  "prihvacena": true,
+  "odbijena": false,
+  "obrisana": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eb60acc57bd8a3a614311c"
+  },
+  "id": 11,
+  "naziv": "Porodjaj",
+  "trajanje": 90,
+  "cena": 6500,
+  "lekari": [],
+  "prihvacena": true,
+  "odbijena": false,
+  "obrisana": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ecbfd2d052c68949ebb6a1"
+  },
+  "id": 13,
+  "naziv": "Pregled krvotoka glave",
+  "trajanje": 50,
+  "cena": 5000,
+  "lekari": [],
+  "prihvacena": true,
+  "odbijena": false,
+  "obrisana": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ee88ac7e384cbd1131df34"
+  },
+  "id": 14,
+  "naziv": "Biranje naocara",
+  "trajanje": 15,
+  "cena": 2000,
+  "lekari": [],
+  "prihvacena": true,
+  "odbijena": false,
+  "obrisana": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ee943f7e384cbd1131e0f3"
+  },
+  "id": 15,
+  "naziv": "Pregled uha",
+  "trajanje": 25,
+  "cena": 4000,
+  "lekari": [
+    "ana"
+  ],
+  "prihvacena": true,
+  "odbijena": false,
+  "obrisana": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ef00bd3cc35922822704e3"
+  },
+  "id": 16,
+  "naziv": "Nazalni pregled",
+  "trajanje": 10,
+  "cena": 1000,
+  "lekari": [],
+  "prihvacena": true,
+  "odbijena": false,
+  "obrisana": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ef02233cc3592282270555"
+  },
+  "id": 17,
+  "naziv": "Inhalacija pacijenta",
+  "trajanje": 30,
+  "cena": 2000,
+  "lekari": [
+    "ana"
+  ],
+  "prihvacena": false,
+  "odbijena": true,
+  "obrisana": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ef034e3cc35922822705cf"
+  },
+  "id": 18,
+  "naziv": "Razgovor seansa",
+  "trajanje": 40,
+  "cena": 2500,
+  "lekari": [
+    "marko"
+  ],
+  "prihvacena": true,
+  "odbijena": false,
+  "obrisana": false,
+  "__v": 0
+}]

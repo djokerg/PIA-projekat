@@ -1,0 +1,73 @@
+a {
+    color: inherit;
+    text-decoration: none;
+  }
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .register-form {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+
+  .register-form h2 {
+    text-align: center;
+    color: #1967d2; /* Blue title color */
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .btn-primary {
+    background-color: #1967d2; /* Blue button background */
+    border: none;
+    width: 100%;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1967d2;
+    color: white; 
+  }
+  
+  .header-title {
+    font-size: 24px;
+  }
+  
+  .header-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-buttons button {
+    background-color: #fff; /* White button background */
+    color: #1967d2; /* Blue header color */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Add spacing between buttons */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+  
+  .header-buttons button:hover {
+    background-color: #1967d2; /* Darker blue on hover */
+    color: white; /* White text on hover */
+  }
+  
+  @media (max-width: 767px) {
+    .header-buttons {
+      justify-content: center;
+      margin-top: 10px;
+    }
+  }

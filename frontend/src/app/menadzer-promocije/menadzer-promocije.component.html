@@ -1,0 +1,16 @@
+<app-header-menadzer></app-header-menadzer>
+<div class="izvestaj-form">
+    <h2>Dodajte novu promociju/akciju:</h2>
+    <form>
+        <div class="form-group">
+        <label for="naslov">Naslov:</label>
+        <input type="text" id="naslov" name="naslov" [(ngModel)]="naslov">
+        </div>
+        <div class="form-group">
+            <label for="tekst">Tekst promocije:</label>
+            <textarea [(ngModel)]="tekst" name="tekst" id="tekst"></textarea>
+        </div>
+        <button class="btn btn-outline-primary me-2 text-center" (click)="dodaj()" type="submit">Dodaj</button>
+        <p>{{error}}</p>
+    </form>
+    </div>

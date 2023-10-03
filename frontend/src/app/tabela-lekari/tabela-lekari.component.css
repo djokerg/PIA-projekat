@@ -1,0 +1,27 @@
+.table-container {
+  background-color: white;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+  background-color: #1967d2; /* Blue header background */
+  color: white; /* White text color */
+}
+.user-profile {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.button-container {
+  display: flex;
+  align-items: center;
+  padding: 10px; /* Add padding to the container */
+}
+
+.button-container .btn {
+  margin: 10px; /* Add spacing between buttons */
+}

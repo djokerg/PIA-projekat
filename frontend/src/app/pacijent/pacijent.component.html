@@ -1,0 +1,12 @@
+<app-header-pacijent></app-header-pacijent>
+<h1>Profil korisnika</h1>
+<div class="large-profile-card">
+    <div class="user-info">
+    <img [src]="'http://localhost:4000/uploads/'+korisnik?.profilna_slika" alt="Profile Picture">
+    <h2>{{ korisnik.ime }} {{ korisnik.prezime }}</h2>
+    <p>Adresa: {{ korisnik.adresa }}</p>
+    <p>E-mail: {{ korisnik.imejl }}</p>
+    <p>Broj telefona: {{ korisnik.br_telefona }}</p>
+    <button class="edit-button" (click)="azuriraj()">Azuriraj</button>
+    </div>
+</div>

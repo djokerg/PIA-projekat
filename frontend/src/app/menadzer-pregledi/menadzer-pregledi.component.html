@@ -1,0 +1,83 @@
+<app-header-menadzer></app-header-menadzer>
+<h2>Upravljajte specijalizacijama i vrstama pregleda:</h2>
+<h3>Klikom na odredjenu specijalizaciju se otvara tabela sa vrstama pregleda</h3>
+<div class="mt-5">
+    <table class="table main-table mx-auto">
+      <thead class="thead-light">
+        <tr>
+          <th>Naziv specijalizacije</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let s of specijalizacije; let i = index">
+          <tr>
+            <td (click)="toggleSubTable(i)">{{ s.naziv }}</td>
+          </tr>
+          <tr *ngIf="selectedItemIndex === i">
+            <td>
+              <table class="table sub-table">
+                <thead class="thead-light"  *ngIf="s.vrste_pregleda.length>0">
+                  <tr>
+                    <th>Naziv</th>
+                    <th>Trajanje</th>
+                    <th>Cena pregleda(dinari)</th>
+                    <th class="text-center">Akcija</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let p of s.vrste_pregleda">
+                    <td>{{ p.naziv }}</td>
+                    <td>{{ p.trajanje }}</td>
+                    <td>{{ p.cena }}</td>
+                    <td colspan="2">
+                        <button type="button" class="btn btn-outline-primary me-2" (click)="azuriraj(p)">Azuriraj</button>
+                        <button mat-raised-button class="btn btn-outline-primary me-2" (click)="obrisi(p)">Obrisi</button>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                    <tr>    
+                      <td colspan="5" class="text-center align-middle">
+                        <div class="btn-container">
+                            <button class="btn btn-outline-primary me-2 text-center" (click)="dodajPregled(s)">Dodaj novu vrstu pregleda</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tfoot>
+              </table>
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2" class="text-center align-middle">
+            <button class="btn btn-outline-primary me-2 text-center" (click)="dodajSpec()">Dodaj novu specijalizaciju</button>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="form-container" *ngIf="dodavanjeSpec">
+    <h2>Dodavanje nove specijalizacije</h2>
+    <form>
+      <div class="form-group">
+        <label for="inputField" class="form-label">Unesite naziv</label>
+        <input type="text" name="inputField" id="inputField" [(ngModel)]="nazivSpec" class="form-input" placeholder="Upisite naziv specijalizacije">
+      </div>
+      <button type="submit" class="form-button" class="btn btn-outline-primary me-2" (click)="potvrdiSpec()">Potvrdi</button>
+        <button class="form-button" class="btn btn-outline-primary me-2" (click)="dodajSpec()">Otkazi</button>
+    </form>
+  </div>
+  <ng-template #confirmationDialog>
+    <h2 mat-dialog-title>Potvrda brisanja vrste pregleda</h2>
+    <mat-dialog-content>
+      Da li ste sigurni da zelite da obrisete izabranu vrstu pregleda?
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button class="btn btn-outline-primary me-2" mat-button [mat-dialog-close]="true">Obrisi</button>
+      <button class="btn btn-outline-primary me-2" mat-button [mat-dialog-close]="false">Otkazi</button>
+    </mat-dialog-actions>
+  </ng-template>
+  
+  

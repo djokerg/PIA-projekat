@@ -1,0 +1,35 @@
+<app-header-lekar></app-header-lekar>
+<div class="izvestaj-form">
+<h2>Dodajte novu vrstu pregleda:</h2>
+<form>
+    <div class="form-group">
+    <label for="naziv">Naziv:</label>
+    <input type="text" id="naziv" name="naziv" [(ngModel)]="naziv">
+    </div>
+    <div class="form-group">
+        <label for="cena">Cena:</label>
+        <input type="number" id="cena" name="cena" [(ngModel)]="cena">
+    </div>
+    <div class="form-group">
+        <label for="trajanje">Trajanje(u minutima):</label>
+        <input type="number" id="trajanje" name="trajanje" [(ngModel)]="trajanje">
+    </div>
+    <button class="btn btn-outline-primary me-2 text-center" (click)="dodaj()" type="submit">Dodaj</button>
+    <p>{{error}}</p>
+</form>
+</div>
+<div class="izvestaj-form">
+    <h2>Dodajte slobodne dane/godisnji odmor:</h2>
+    <form>
+        <div class="form-group">
+        <label for="datum_od">Datum od:</label>
+        <input type="date" id="datum_od" name="datum_od" [(ngModel)]="datum_od">
+        </div>
+        <div class="form-group">
+            <label for="datum_do">Datum do:</label>
+            <input type="date" id="datum_do" name="datum_do" [(ngModel)]="datum_do">
+            </div>
+        <button class="btn btn-outline-primary me-2 text-center" (click)="dodajSlobodne()" type="submit">Dodaj</button>
+        <p>{{error2}}</p>
+    </form>
+    </div>

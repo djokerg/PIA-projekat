@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "64ee93a07e384cbd1131e0a6"
+  },
+  "id": 1,
+  "datum_vreme": {
+    "$date": "2023-08-30T12:55:00.000Z"
+  },
+  "lekar": "ana",
+  "razlog_dolaska": "Pregled grla",
+  "dijagnoza": "Pacijent ima laringitis, bakerijska infekcija napreduje i potrebno je brzo reagovati.",
+  "prep_terapija": "Amoksicilin 3x20mg",
+  "prep_datum": {
+    "$date": "2023-09-08T12:55:00.000Z"
+  },
+  "pacijent": "pera",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ef01fa3cc3592282270545"
+  },
+  "id": 2,
+  "datum_vreme": {
+    "$date": "2023-08-30T08:46:00.000Z"
+  },
+  "lekar": "ana",
+  "razlog_dolaska": "Pregled grla",
+  "dijagnoza": "Pacijent razvio bakterijsku infekciju grla",
+  "prep_terapija": "Trachistan lozenge",
+  "prep_datum": {
+    "$date": "2023-09-08T08:46:00.000Z"
+  },
+  "pacijent": "pera",
+  "__v": 0
+}]

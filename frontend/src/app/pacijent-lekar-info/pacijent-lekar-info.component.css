@@ -1,0 +1,21 @@
+.image-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+    
+.image-cell, .text-cell {
+    text-align: center;
+    padding: 10px;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+}
+.image-frame {
+    width: 100px; /* Adjust the frame width */
+    height: 100px; /* Adjust the frame height */
+    overflow: hidden;
+    }
+    
+    .image {
+    width: 100%;
+    height: auto;
+    }

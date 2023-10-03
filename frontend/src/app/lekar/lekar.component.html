@@ -1,0 +1,53 @@
+<app-header-lekar></app-header-lekar>
+<h1>Profil korisnika</h1>
+<div class="large-profile-card">
+    <div class="user-info">
+    <img [src]="'http://localhost:4000/uploads/'+korisnik?.profilna_slika" alt="Profile Picture">
+    <h2>{{ korisnik.ime }} {{ korisnik.prezime }}</h2>
+    <p>Adresa: {{ korisnik.adresa }}</p>
+    <p>E-mail: {{ korisnik.imejl }}</p>
+    <p>Broj telefona: {{ korisnik.br_telefona }}</p>
+    <p>Broj licence: {{ korisnik.dodatno['broj_licence'] }}</p>
+    <p>Specijalizacija: {{ korisnik.dodatno['specijalizacija'] }}</p>
+    <p>Ogranak: {{ korisnik.dodatno['ogranak_ordinacije'] }}</p>
+    <button class="edit-button" (click)="azuriraj()">Azuriraj</button>
+  </div>
+</div>
+<h2>Lista pregleda iz vase specijalizacije koje obavljate:</h2>
+<p *ngIf="vr_pregleda_obavlja.length==0">Trenutno ne obavljate nijedan pregled</p>
+<table class="blue-table" *ngIf="vr_pregleda_obavlja.length>0">
+    <thead>
+      <tr>
+        <th>Naziv</th>
+        <th>Trajanje</th>
+        <th>Cena</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vrp of vr_pregleda_obavlja">
+        <td>{{vrp.naziv}}</td>
+        <td>{{vrp.trajanje}}</td>
+        <td>{{vrp.cena}}</td>
+      </tr>
+    </tbody>
+  </table>
+<h2>Dodajte nove preglede iz vase specijalizacije:</h2>
+<p *ngIf="vr_pregleda_neob.length==0">Trenutno ne postoji nijedan pregled iz vase specijalizacije</p>
+<table class="blue-table" *ngIf="vr_pregleda_neob.length>0">
+    <thead>
+      <tr>
+        <th>Naziv</th>
+        <th>Trajanje</th>
+        <th>Cena</th>
+        <th>Dodaj</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vrp of vr_pregleda_neob">
+        <td>{{vrp.naziv}}</td>
+        <td>{{vrp.trajanje}}</td>
+        <td>{{vrp.cena}}</td>
+        <td><button type="button" class="btn btn-outline-primary me-2" (click)="dodaj(vrp)">Dodaj pregled</button></td>
+      </tr>
+    </tbody>
+  </table>

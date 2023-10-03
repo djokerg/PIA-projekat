@@ -1,0 +1,30 @@
+<header class="header justify-content-between">
+    <div class="header-title">
+      <a routerLink="/">MediCare</a>
+    </div>
+    <div class="header-buttons">
+      <button type="button" class="btn btn-primary" (click)="registracija()">Registruj se</button>
+    </div>
+  </header>
+<div class="container"  style="margin-top: 10px;">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="login-container">
+          <form class="login-form">
+            <h2 class="h3 mb-3 font-weight-normal">Ulogujte se sa Vasim podacima</h2>
+            <div class="form-group">
+                <label for="inputUsername" class="sr-only">Korisnicko ime</label>
+                <input type="text" id="inputUsername" name="inputUsername" class="form-control" [(ngModel)]="korisnicko_ime" placeholder="Unesite korisnicko ime" autofocus="">
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="sr-only">Lozinka</label>
+                <input type="password" id="inputPassword" name="inputPassword" class="form-control" [(ngModel)]="lozinka" placeholder="Unesite lozinku">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" (click)="prijava()">Potvrdi</button><br>
+            {{msg}}
+            <p style="color:red">{{error}}</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

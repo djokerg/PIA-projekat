@@ -1,0 +1,24 @@
+<header class="header justify-content-between">
+  <div class="header-title">
+    MediCare
+  </div>
+  <div class="header-buttons">
+    <button type="button" class="btn btn-primary" (click)="prijava()">Prijavi se</button>
+    <button type="button" class="btn btn-primary" (click)="registracija()">Registruj se</button>
+  </div>
+</header>
+<carousel class="carousel-container" [interval]="3000" [noPause]="true" [isAnimated]="true">
+    <slide *ngFor="let image of images">
+        <img class="carousel-image" [src]="image.url" alt="Image">
+      </slide>
+</carousel>
+<div class="container text-center mt-5">
+  <h1 class="text-primary">O nama</h1>
+  <p>MediCare Ordinacija je posvećena pružanju vrhunske medicinske nege i usluga našim pacijentima. Naš tim stručnjaka iz različitih medicinskih oblasti posvećen je vašem zdravlju i dobrobiti.<br>
+    
+    Naši lekari i medicinsko osoblje pristupaju svakom pacijentu sa pažnjom i posvećenošću. Bez obzira da li vam je potreban redovan pregled, dijagnostika, konsultacija ili tretman, možete se osloniti na nas da vam pružimo najbolju moguću negu.<br>
+    
+    Vaša dobrobit je naša misija. Radujemo se što smo deo vašeg putovanja ka očuvanju zdravlja i kvalitetnijem životu. Ako imate bilo kakva pitanja ili želite da zakazati termin, slobodno nas kontaktirajte. Hvala vam što ste izabrali MediCare Ordinaciju kao svoj izbor za medicinsku negu.<br>
+</div>
+
+<app-tabela-lekari></app-tabela-lekari>

@@ -1,0 +1,76 @@
+<div class="container">
+    <h2>Lekari</h2>
+        <div class="col-md-4 mb-3">
+            <button class="btn btn-primary" (click)="searchData()">Pretrazi</button>
+        </div>
+      <div class="row">
+        
+        <div class="col-md-4 mb-3">
+            <input type="text" [(ngModel)]="ime"  class="form-control" placeholder="Ime">
+        </div>
+        <div class="col-md-4 mb-3">
+            <input type="text" [(ngModel)]="prezime"  class="form-control" placeholder="Prezime">
+        </div>
+        <div class="col-md-4 mb-3">
+            <input type="text" [(ngModel)]="specijalizacija"  class="form-control" placeholder="Specijalizacija">
+        </div>
+      </div>
+<p>{{rezultati}}</p>
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div  class="button-container" *ngIf="searched.length>0">
+            <button class="btn btn-primary" (click)="sortBy('ime')">
+                Sortiraj po imenu
+                <span *ngIf="sortField === 'ime'" class="sort-icon">
+                {{ sortAscending ? '▲' : '▼' }}
+                </span>
+            </button>
+            <button class="btn btn-primary" (click)="sortBy('prezime')">
+                Sortiraj po prezimenu
+                <span *ngIf="sortField === 'prezime'" class="sort-icon">
+                {{ sortAscending ? '▲' : '▼' }}
+                </span>
+            </button>
+            <button class="btn btn-primary" (click)="sortBy('specijalizacija')">
+                Sortiraj po specijalizaciji
+                <span *ngIf="sortField === 'specijalizacija'" class="sort-icon">
+                    {{ sortAscending ? '▲' : '▼' }}
+                </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="table-container" *ngIf="searched.length>0">
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead class="table-header">
+            <tr>
+                <th>Profilna fotografija</th>
+              <th>Ime</th>
+              <th>Prezime</th>
+              <th>Specijalizacija</th>
+            </tr>
+          </thead>
+    <tbody>
+        <tr *ngFor="let l of searched">
+        <td>
+            <img class="user-profile" [src]="'http://localhost:4000/uploads/'+l.profilna_slika" alt="Image">
+        </td>
+        <td>
+            <p>{{ l.ime }}</p>
+        </td>
+        <td>
+            <p>{{ l.prezime }}</p>
+        </td>
+        <td>
+            <p>{{ l.dodatno['specijalizacija'] }}</p>
+        </td>
+        </tr>
+    </tbody>
+    </table>
+      </div>
+    </div>
+  </div>
+
